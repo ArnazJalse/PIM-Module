@@ -25,7 +25,7 @@ public class ReportingMethod {
 		try {
 			// Load the properties file
 			FileInputStream file = new FileInputStream(
-					"/Users/arbazjalse/test/arnazWork/PIM_Module/src/test/resources/configs/config_8.properties");
+					"config_8.properties");
 			properties = new Properties();
 			try {
 				properties.load(file);

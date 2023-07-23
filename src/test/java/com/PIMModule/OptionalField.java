@@ -26,7 +26,7 @@ public class OptionalField {
 		try {
 			// Load the properties file
 			FileInputStream file = new FileInputStream(
-					"/Users/arbazjalse/test/arnazWork/PIM_Module/src/test/resources/configs/config_6.properties");
+					"config_6.properties");
 			properties = new Properties();
 			try {
 				properties.load(file);

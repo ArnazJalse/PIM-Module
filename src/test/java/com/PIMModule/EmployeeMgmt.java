@@ -26,7 +26,7 @@ public class EmployeeMgmt {
 		try {
 			// Load the properties file
 			FileInputStream file = new FileInputStream(
-					"/Users/arbazjalse/test/arnazWork/PIM_Module/src/test/resources/configs/config_3.properties");
+					"config_3.properties");
 			properties = new Properties();
 			try {
 				properties.load(file);

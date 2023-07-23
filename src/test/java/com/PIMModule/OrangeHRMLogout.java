@@ -25,7 +25,7 @@ public class OrangeHRMLogout {
 		
 		try {
 			// Load the properties file
-			FileInputStream file = new FileInputStream("/Users/arbazjalse/test/arnazWork/PIM_Module/src/test/resources/configs/config_7.properties");
+			FileInputStream file = new FileInputStream("config_7.properties");
 			properties = new Properties();
 			try {
 				properties.load(file);

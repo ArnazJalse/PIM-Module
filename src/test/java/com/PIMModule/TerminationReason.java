@@ -26,7 +26,7 @@ public class TerminationReason {
 		try {
 			// Load the properties file
 			FileInputStream file = new FileInputStream(
-					"/Users/arbazjalse/test/arnazWork/PIM_Module/src/test/resources/configs/config_5.properties");
+					"config_5.properties");
 			properties = new Properties();
 			try {
 				properties.load(file);

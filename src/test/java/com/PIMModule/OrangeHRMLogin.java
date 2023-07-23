@@ -24,7 +24,7 @@ public class OrangeHRMLogin {
 		
 		try {
 			// Load the properties file
-			FileInputStream file = new FileInputStream("/Users/arbazjalse/test/arnazWork/PIM_Module/src/test/resources/configs/config_1.properties");
+			FileInputStream file = new FileInputStream("config_1.properties");
 			properties = new Properties();
 			try {
 				properties.load(file);
