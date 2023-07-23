@@ -1,13 +1,13 @@
 # PIM-Module
 # Automation Test Suite for OrangeHRM
 
-This repository contains the automation test suite for the OrangeHRM web application using the TestNG framework. The test suite covers various scenarios related to the login module, logout module, and the PIM (People Information Management) module.
+This repository contains the automation test suite for the OrangeHRM web application using the TestNG framework. The test suite covers various scenarios related to the login module, the logout module, and the PIM (People Information Management) module.
 
 ## Test Cases Covered
 
 ### Login Module:
 1. **Login With Valid Credentials:** Verify that a user can successfully log in with valid credentials.
-2. **Login With Invalid Credentials:** Verify that a user cannot log in with invalid credentials and appropriate error messages are displayed.
+2. **Login With Invalid Credentials:** Verify that a user cannot log in with invalid credentials and that appropriate error messages are displayed.
 3. **Login With Empty Fields:** Verify that the login form cannot be submitted with empty username and password fields, and proper error messages are displayed.
 
 ### Logout Module:
@@ -105,10 +105,6 @@ Before starting manual testing, ensure the following pre-requisites are met:
 4. Test the functionality of deleting an employee record by locating the record, selecting the delete option, and confirming the deletion. Verify that the employee record is no longer present in the system.
 5. Access the report generation feature and test the generation of various reports (e.g., employee list, attendance report). Verify that the reports contain accurate and relevant data.
 6. Click on the "Configuration" dropdown and explore the available options. Verify that the options are accessible and functional.
-
-## Bug Reporting
-
-During manual testing, if any defects or issues are identified, follow the organization's bug reporting process to log the issues. Include detailed steps to reproduce the issue, actual results, expected results, and any relevant screenshots or logs.
 
 ## Conclusion
 
