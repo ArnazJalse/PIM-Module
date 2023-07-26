@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.PIMModule.ReportingMethod">
+      <class name="com.PIMModule.EmployeeMgmt">
         <methods>
-          <include name="tearDown"/>
+          <include name="UpdateEmployee"/>
           <include name="loginWithValidCredentials"/>
-          <include name="deleteReportingMethod"/>
-          <include name="setUp"/>
           <include name="logOut"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="deleteEmployee"/>
         </methods>
-      </class> <!-- com.PIMModule.ReportingMethod -->
+      </class> <!-- com.PIMModule.EmployeeMgmt -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

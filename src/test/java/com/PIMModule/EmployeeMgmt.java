@@ -1,5 +1,6 @@
 package com.PIMModule;
 
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
@@ -98,13 +99,17 @@ public class EmployeeMgmt {
 		String middleNameTextboxLoc = properties.getProperty("middleName.textbox.Locator");
 		String lastNameTextboxLoc = properties.getProperty("LastName.textbox.Locator");
 		String saveButtonLoc = properties.getProperty("save_button.Locator");
-		// Get locators from properties
-		String adminNameDDLoc = properties.getProperty("adminName_DD.Loc");
-		String logoutLinkLoc = properties.getProperty("logout_link.Loc");
+		String createLoginDetailsToggleLoc = properties.getProperty("createLoginDetails.Toggle.Locator");
+		String usernametxtboxLoc = properties.getProperty("username_txtbox.Locator");
+		String passwordtxtboxLoc = properties.getProperty("password_txtbox.Locator");
+		String confirmPasswordtxtboxLoc = properties.getProperty("confirmPassword_txtbox.Locator");
 
 		String firstName = properties.getProperty("firstName.Loc");
 		String middleName = properties.getProperty("middleName.Loc");
 		String lastName = properties.getProperty("LastName.Loc");
+		String userName = properties.getProperty("username");
+		String password = properties.getProperty("password");
+		String confirmPassword = properties.getProperty("confirmPassword");
 
 		driver.findElement(By.xpath(PIMLocator)).click();
 		try {
@@ -130,6 +135,22 @@ public class EmployeeMgmt {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		driver.findElement(By.xpath(createLoginDetailsToggleLoc)).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath(usernametxtboxLoc)).sendKeys(userName);
+		driver.findElement(By.xpath(passwordtxtboxLoc)).sendKeys(password);
+		driver.findElement(By.xpath(confirmPasswordtxtboxLoc)).sendKeys(confirmPassword);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.findElement(By.xpath(saveButtonLoc)).click();
 		try {
 			Thread.sleep(5000);
@@ -149,15 +170,38 @@ public class EmployeeMgmt {
 		String searchNametxtboxLoc = properties.getProperty("searchEmpName_textbox.Locator");
 		String searchButtonLoc = properties.getProperty("search_button.Locator");
 		String updateButtonLoc = properties.getProperty("update_button.Locator");
-		String updatefirstNameLoc = properties.getProperty("updatefirstName_txtbox.Locator");
+		String nickNametxtboxLoc = properties.getProperty("nickName_txtbox.Locator");
+		String otherIDtxtboxLoc = properties.getProperty("otherId_txtbox.Locator");
+		String driverLicenseNumtxtboxLoc = properties.getProperty("driverLicenseNumber_txtbox.Locator");
+		String expirydateCalenderLoc = properties.getProperty("expiryDate_calender.Locator");
+		String SSNnumbertxtboxLoc = properties.getProperty("SSNNumber_txtbox.Locator");
+		String SINNumbertxtboxLoc = properties.getProperty("SINNumber_txtbox.Locator");
+		String nationalityDDLoc = properties.getProperty("nationality_DD.Locator");
+		String nationalitySelectedLoc = properties.getProperty("nationality_Selected.Locator");
+		String maritalStatusDDLoc = properties.getProperty("maritalStatus_DD.Locator");
+		String maritalStatusSelectedLoc = properties.getProperty("maritalStatus_Selected.Locator");
+		String genderCheckboxLoc = properties.getProperty("gender_checkbox.Locator");
+		String DOBCalenderLoc = properties.getProperty("DOB_calender.Locator");
+		String militryServicetxtboxLoc = properties.getProperty("militryService_txtbox.Locator");
 		String updateSaveButtonLoc = properties.getProperty("updatesave_button.Locator");
+		String bloodtypeDDLoc = properties.getProperty("bloodtype_DD.Locator");
+		String bloodtypeSelectedLoc = properties.getProperty("bloodtypr_Selected.Locator");
+		String updateSaveButton1Loc = properties.getProperty("updatesave_button1.Locator");
 		String jobLinkLoc = properties.getProperty("job_link.Locator");
 		String jobTitleDDLoc = properties.getProperty("job_title.Locator");
 		String jobTitleSelectLoc = properties.getProperty("jobTitle_select.Locator");
 		String saveButtonLoc = properties.getProperty("jobSave_button.Locator");
 
 		String firstName = properties.getProperty("firstName.Loc");
-		String updateFirstName = properties.getProperty("updateFirstName.Loc");
+		String nickName = properties.getProperty("nickName");
+		String otherID = properties.getProperty("otherId");
+		String DriverLicenseNumber = properties.getProperty("DriverLicenseNumber");
+		String expiryDate = properties.getProperty("expirydate");
+		String SSNNumber = properties.getProperty("SSNNumber");
+		String SINNumber = properties.getProperty("SINNumber");
+		String DOB = properties.getProperty("DOB");
+		String militryService = properties.getProperty("militryService");
+		
 		driver.findElement(By.xpath(PIMLocator)).click();
 		try {
 			Thread.sleep(2000);
@@ -187,8 +231,43 @@ public class EmployeeMgmt {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath(updatefirstNameLoc)).clear();
-		driver.findElement(By.xpath(updatefirstNameLoc)).sendKeys(updateFirstName);
+		driver.findElement(By.xpath(nickNametxtboxLoc)).sendKeys(nickName);
+		driver.findElement(By.xpath(otherIDtxtboxLoc)).sendKeys(otherID);
+		driver.findElement(By.xpath(driverLicenseNumtxtboxLoc)).sendKeys(DriverLicenseNumber);
+		driver.findElement(By.xpath(expirydateCalenderLoc)).sendKeys(expiryDate);
+		driver.findElement(By.xpath(SSNnumbertxtboxLoc)).sendKeys(SSNNumber);
+		driver.findElement(By.xpath(SINNumbertxtboxLoc)).sendKeys(SINNumber);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath(nationalityDDLoc)).click();
+		driver.findElement(By.xpath(nationalitySelectedLoc)).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath(maritalStatusDDLoc)).click();
+		driver.findElement(By.xpath(maritalStatusSelectedLoc)).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		driver.findElement(By.xpath(DOBCalenderLoc)).sendKeys(DOB);
+		driver.findElement(By.xpath(genderCheckboxLoc)).click();
+		driver.findElement(By.xpath(militryServicetxtboxLoc)).sendKeys(militryService);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.findElement(By.xpath(updateSaveButtonLoc)).click();
 		try {
 			Thread.sleep(5000);
@@ -196,6 +275,16 @@ public class EmployeeMgmt {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		driver.findElement(By.xpath(bloodtypeDDLoc)).click();
+		driver.findElement(By.xpath(bloodtypeSelectedLoc)).click();
+		driver.findElement(By.xpath(updateSaveButton1Loc)).click();
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		driver.findElement(By.xpath(jobLinkLoc)).click();
 		try {
 			Thread.sleep(5000);
@@ -224,7 +313,7 @@ public class EmployeeMgmt {
 		String deleteButtonLoc = properties.getProperty("delete_button.Locator");
 		String confirmDeletePopupLoc = properties.getProperty("confirm_deletepopup.Locator");
 
-		String updateFirstName = properties.getProperty("updateFirstName.Loc");
+		String firstName = properties.getProperty("firstName.Loc");
 
 		driver.findElement(By.xpath(PIMLocator)).click();
 		try {
@@ -233,7 +322,7 @@ public class EmployeeMgmt {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath(searchNametxtboxLoc)).sendKeys(updateFirstName);
+		driver.findElement(By.xpath(searchNametxtboxLoc)).sendKeys(firstName);
 		;
 		try {
 			Thread.sleep(2000);
